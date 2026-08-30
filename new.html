@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskNova</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h1 class="logo">Task<span>Nova</span></h1>
+
+            <ul>
+
+                <li class="active">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Dashboard
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-list-check"></i>
+                    All Tasks
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                    Pending
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Completed
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-star"></i>
+                    Important
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Calendar
+                </li>
+
+            </ul>
+
+            <button class="upgrade">
+                <i class="fa-solid fa-crown"></i>
+                Upgrade
+            </button>
+
+        </aside>
+
+
+        <!-- Main -->
+        <main class="main">
+
+            <div class="top">
+
+                <div class="search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search tasks..."
+                    >
+
+                </div>
+
+                <button class="addBtn" id="addTaskBtn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Task
+
+                </button>
+
+            </div>
+
+
+            <h1>Hello, Mahalakshmi 👋</h1>
+
+
+            <!-- Cards -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <h2>Total Tasks</h2>
+
+                    <h1 id="totalTasks">0</h1>
+
+                </div>
+
+
+                <div class="card">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h2>Completed</h2>
+
+                    <h1 id="completedTasks">0</h1>
+
+                </div>
+
+
+                <div class="card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h2>Pending</h2>
+
+                    <h1 id="pendingTasks">0</h1>
+
+                </div>
+
+
+                <div class="card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h2>Productivity</h2>
+
+                    <h1 id="productivity">0%</h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- Content -->
+
+            <div class="content">
+
+
+                <!-- Tasks -->
+
+                <section class="tasks" id="taskSection">
+
+                    <div class="title">
+
+                        <h2>My Tasks</h2>
+
+                        <div class="filters">
+
+                            <button>All</button>
+
+                            <button>Pending</button>
+
+                            <button>Completed</button>
+
+                            <button>Important</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JavaScript will create tasks here -->
+
+                    <div id="taskList"></div>
+
+                </section>
+
+
+                <!-- Right Panel -->
+
+                <aside class="right">
+
+
+                    <div class="priority">
+
+                        <h2>Task Priority</h2>
+
+                        <p>🔴 High : <span id="highCount">0</span></p>
+
+                        <p>🟡 Medium : <span id="mediumCount">0</span></p>
+
+                        <p>🟢 Low : <span id="lowCount">0</span></p>
+
+                    </div>
+
+
+                    <div class="upcoming">
+
+                        <h2>Upcoming</h2>
+
+                        <p>📅 UI Review - Today</p>
+
+                        <p>📅 Deploy Project - Tomorrow</p>
+
+                        <p>📅 React Practice - Sunday</p>
+
+                    </div>
+
+
+                    <div class="quote-box">
+
+                        <h2 id="quote"></h2>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
